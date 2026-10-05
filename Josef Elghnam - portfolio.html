@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Josef Elghnam – Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#eceff6;--ink:#121c36;--mute:#566080;--card:#fff;--line:#c9d0e2;--acc:#e8452c;--acc2:#2f5bea;
+--f:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;--m:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1527;--ink:#e9ecf6;--mute:#9aa4c4;--card:#172041;--line:#2b3762;--acc:#ff6a50;--acc2:#7c9bff}}
+:root[data-theme="dark"]{--bg:#0f1527;--ink:#e9ecf6;--mute:#9aa4c4;--card:#172041;--line:#2b3762;--acc:#ff6a50;--acc2:#7c9bff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--f)}
+html[lang=en] .de,html[lang=de] .en{display:none!important}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc2);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.mono{font-family:var(--m);font-size:.82rem}
+.lang{display:inline-flex;border:2px solid var(--ink);border-radius:99px;overflow:hidden}
+.lang button{font:600 .85rem var(--m);background:none;color:var(--ink);border:0;padding:6px 14px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+h1{font-size:clamp(3rem,10vw,6.8rem);line-height:.92;letter-spacing:-.04em;font-weight:800;margin:.5em 0 .25em}
+.role{font-size:clamp(1.15rem,2.4vw,1.6rem);max-width:30ch;margin:0 0 1.2rem;font-weight:600}
+.lead{max-width:62ch;color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:1.6rem 0}
+.links a{border:2px solid var(--ink);padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.links a:first-child{background:var(--acc);border-color:var(--acc);color:#fff}
+.links a:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pipe{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:2.2rem 0 0;padding:18px;border:2px dashed var(--line);border-radius:14px}
+.pipe b{font:600 .85rem var(--m);background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:6px 10px}
+.pipe i{font-style:normal;color:var(--acc);font-weight:800}
+.pipe small{flex-basis:100%;color:var(--mute);font-size:.85rem}
+.pipe b{animation:lit 6s infinite}
+.pipe b:nth-of-type(2){animation-delay:1s}.pipe b:nth-of-type(3){animation-delay:2s}.pipe b:nth-of-type(4){animation-delay:3s}.pipe b:nth-of-type(5){animation-delay:4s}.pipe b:nth-of-type(6){animation-delay:5s}
+@keyframes lit{0%,16%{background:var(--acc);color:#fff;border-color:var(--acc)}20%,100%{}}
+@media(prefers-reduced-motion:reduce){.pipe b{animation:none}html{scroll-behavior:auto}}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;margin:4.5rem 0 1.4rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:20px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card.big{grid-column:1/-1;border-width:3px;box-shadow:8px 8px 0 var(--acc)}
+.card h3{margin:0;font-size:1.5rem;letter-spacing:-.02em}
+.card p{margin:0}
+.tag{font:400 .78rem var(--m);color:var(--mute)}
+.pill{display:inline-block;font:600 .75rem var(--m);background:var(--bg);border:1px solid var(--line);padding:2px 9px;border-radius:99px;margin:0 4px 4px 0}
+.card .src{margin-top:auto;font-size:.9rem;overflow-wrap:anywhere}
+.src a{color:var(--acc2);font-weight:600}
+.note{font-size:.85rem;color:var(--mute)}
+.more{columns:2 280px;column-gap:28px;padding:0;list-style:none;margin:0}
+.more li{break-inside:avoid;padding:12px 0;border-bottom:1px solid var(--line)}
+.more b{display:block}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.skills h3{font-size:1rem;margin:0 0 6px}
+.tl{border-left:3px solid var(--ink);padding-left:20px;margin:0}
+.tl div{margin-bottom:18px;position:relative}
+.tl div::before{content:"";position:absolute;left:-28px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--acc)}
+.tl b{display:block}
+footer{margin:5rem 0 3rem;padding-top:24px;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+<span class="mono">Vienna, AT · <span class="en">available now</span><span class="de">ab sofort verfügbar</span></span>
+<div class="lang" role="group" aria-label="Language"><button id="b-en" aria-pressed="true">EN</button><button id="b-de" aria-pressed="false">DE</button></div>
+</div>
+
+<header>
+<h1>Josef<br>Elghnam</h1>
+<p class="role en">Software engineer. I write C, C++ and Rust, and I build the web side too.</p>
+<p class="role de">Softwareentwickler. Ich schreibe C, C++ und Rust und baue auch die Web-Seite.</p>
+<p class="lead en">I'm studying at 42 Vienna and work on systems programming, web development and Linux administration. I learn by building things from scratch and explaining them to peers in code review.</p>
+<p class="lead de">Ich studiere an der 42 Vienna und arbeite an Systemprogrammierung, Webentwicklung und Linux-Administration. Ich lerne, indem ich Dinge von Grund auf baue und sie Peers im Code-Review erkläre.</p>
+<nav class="links" aria-label="Links">
+<a href="mailto:yousef.elghanam@gmail.com"><span class="en">Email me</span><span class="de">E-Mail schreiben</span></a>
+<a href="https://github.com/YousefElghanam">GitHub</a>
+<a href="https://linkedin.com/in/josef-elghnam-a77194b5">LinkedIn</a>
+<a href="https://leetcode.com/u/yousefelghanam/">LeetCode</a>
+</nav>
+<div class="pipe" aria-label="minishell pipeline">
+<b>input</b><i>›</i><b>lexer</b><i>›</i><b>parser</b><i>›</i><b>AST</b><i>›</i><b>expand</b><i>›</i><b>execve()</b>
+<small class="en">The path of one command through minishell. I built the lexer, parser, tree and expansion; my teammate built execution.</small>
+<small class="de">Der Weg eines Befehls durch minishell. Ich habe Lexer, Parser, Baum und Expansion gebaut; mein Teammitglied die Ausführung.</small>
+</div>
+</header>
+
+<main>
+<h2><span class="en">Projects</span><span class="de">Projekte</span></h2>
+<div class="grid">
+
+<article class="card big">
+<h3>minishell</h3>
+<span class="tag">C · <span class="en">team of 2</span><span class="de">Team aus 2</span></span>
+<p class="en">A Unix shell from scratch: pipes, redirections, heredocs, built-ins, signals, plus the bonus <code>&amp;&amp;</code>, <code>||</code> and wildcards. I owned the whole parsing and expansion subsystem: tokenizer, quote handling, <code>$VAR</code> and <code>*</code> expansion, and a binary tree of commands and operators handed to execution.</p>
+<p class="de">Eine Unix-Shell von Grund auf: Pipes, Umleitungen, Heredocs, Built-ins, Signale sowie die Bonus-Teile <code>&amp;&amp;</code>, <code>||</code> und Wildcards. Ich war für das gesamte Parsing- und Expansion-Subsystem verantwortlich: Tokenizer, Quote-Handling, <code>$VAR</code>- und <code>*</code>-Expansion und ein Binärbaum aus Befehlen und Operatoren, der an die Ausführung übergeben wird.</p>
+<div><span class="pill">fork</span><span class="pill">execve</span><span class="pill">pipes</span><span class="pill">signals</span><span class="pill">Valgrind</span></div>
+<p class="src"><a href="https://github.com/ChomaMichal/minishell">github.com/ChomaMichal/minishell</a> <span class="note en">(team repository)</span><span class="note de">(Team-Repository)</span></p>
+</article>
+
+<article class="card">
+<h3>webserv</h3>
+<span class="tag">C++98 · epoll · <span class="en">team project</span><span class="de">Teamprojekt</span></span>
+<p class="en">An HTTP/1.1 server with no framework. Non-blocking, event-driven on <code>epoll</code> with one event loop for many clients. Covers request parsing, responses, config-driven routing, error pages, CGI, timeouts and connection state.</p>
+<p class="de">Ein HTTP/1.1-Server ohne Framework. Nicht-blockierend und ereignisgesteuert auf <code>epoll</code> mit einer Event Loop für viele Clients. Umfasst Request-Parsing, Responses, konfigurationsbasiertes Routing, Fehlerseiten, CGI, Timeouts und Verbindungszustände.</p>
+<div><span class="pill">TCP/IP</span><span class="pill">CGI</span><span class="pill">HTTP</span></div>
+<p class="src"><a href="https://github.com/Julien-rd/webserv">github.com/Julien-rd/webserv</a> <span class="note en">(team repository)</span><span class="note de">(Team-Repository)</span></p>
+</article>
+
+<article class="card">
+<h3>Transcendence</h3>
+<span class="tag">React · TypeScript · Rust · Axum · <span class="en">in progress, team of 4</span><span class="de">in Entwicklung, Team aus 4</span></span>
+<p class="en">A Polymarket-like prediction and trading platform. I am the only frontend developer: components, forms, state and the connection to the Rust/Axum APIs. Now building OAuth login, then real-time data over WebSockets. I also review backend pull requests.</p>
+<p class="de">Eine Polymarket-ähnliche Prognose- und Trading-Plattform. Ich bin der einzige Frontend-Entwickler: Komponenten, Formulare, State und die Anbindung an die Rust/Axum-APIs. Aktuell entsteht der OAuth-Login, danach Echtzeitdaten über WebSockets. Außerdem reviewe ich Backend-Pull-Requests.</p>
+<div><span class="pill">PostgreSQL</span><span class="pill">Redis</span><span class="pill">TigerBeetle</span><span class="pill">Docker</span></div>
+<p class="src"><a href="https://github.com/for-legal-reasons-this-is-game/For-legal-reasons-this-is-game">github.com/for-legal-reasons-this-is-game/For-legal-reasons-this-is-game</a> <span class="note en">(team repository)</span><span class="note de">(Team-Repository)</span></p>
+</article>
+
+<article class="card">
+<h3>miniRT</h3>
+<span class="tag">C · MiniLibX · <span class="en">team of 2</span><span class="de">Team aus 2</span></span>
+<p class="en">A ray tracer with spheres, planes, cylinders and cones, multiple spot lights, shadows, and bump and normal mapping. I wrote the scene parser and the extended object and texture handling. Full marks including bonus.</p>
+<p class="de">Ein Raytracer mit Kugeln, Ebenen, Zylindern und Kegeln, mehreren Spotlights, Schatten sowie Bump- und Normal-Mapping. Ich habe den Szenen-Parser und die erweiterte Objekt- und Texturverarbeitung geschrieben. Volle Punktzahl inklusive Bonus.</p>
+<p class="src"><a href="https://github.com/ShacroBow/minirt">github.com/ShacroBow/minirt</a> <span class="note en">(team repository)</span><span class="note de">(Team-Repository)</span></p>
+</article>
+
+<article class="card">
+<h3>push_swap</h3>
+<span class="tag">C</span>
+<p class="en">A custom stack-sorting strategy under a tiny operation set, tuned until it met the operation-count limits. Comes with a terminal visualizer you can drive by keyboard.</p>
+<p class="de">Eine eigene Stack-Sortierstrategie mit stark eingeschränkten Operationen, optimiert bis zur Einhaltung der Operationsgrenzen. Mit einem Terminal-Visualisierer, der per Tastatur bedient wird.</p>
+</article>
+
+<article class="card">
+<h3>wordle · 2048</h3>
+<span class="tag">Rust · C · <span class="en">42 rushes</span><span class="de">42-Rushes</span></span>
+<p class="en">Two-day team projects under strict time limits. A terminal Wordle in Rust and a terminal 2048 in C.</p>
+<p class="de">Teamprojekte mit zwei Tagen Zeit. Ein Wordle im Terminal in Rust und ein 2048 im Terminal in C.</p>
+<p class="src"><a href="https://github.com/atdeters/2048">github.com/atdeters/2048</a> <span class="note en">(team repository)</span><span class="note de">(Team-Repository)</span></p>
+</article>
+</div>
+
+<h2><span class="en">Also built</span><span class="de">Außerdem gebaut</span></h2>
+<ul class="more">
+<li><b>pipex · philosophers</b><span class="en">Pipes and processes; threads, mutexes and deadlock avoidance.</span><span class="de">Pipes und Prozesse; Threads, Mutexe und Deadlock-Vermeidung.</span></li>
+<li><b>Inception</b><span class="en">Multi-container Docker stack: NGINX, WordPress/PHP-FPM, MariaDB.</span><span class="de">Multi-Container-Docker-Stack: NGINX, WordPress/PHP-FPM, MariaDB.</span></li>
+<li><b>Born2beroot</b><span class="en">Debian VM administration: SSH, firewall, sudo, LVM, cron, Bash.</span><span class="de">Debian-VM-Administration: SSH, Firewall, sudo, LVM, Cron, Bash.</span></li>
+<li><b>CPP Modules</b><span class="en">All modules, including Ford-Johnson merge-insertion sort.</span><span class="de">Alle Module, inklusive Ford-Johnson-Merge-Insertion-Sort.</span></li>
+<li><b>libft · get_next_line · ft_printf · FdF</b><span class="en">C standard library, line reader, printf and a 3D wireframe viewer.</span><span class="de">C-Standardbibliothek, Zeilenleser, printf und ein 3D-Wireframe-Viewer.</span></li>
+<li><b>Rust ray-traced engine</b><span class="en">Personal side project in progress: CPU ray tracing with winit and pixels.</span><span class="de">Persönliches Nebenprojekt in Arbeit: CPU-Raytracing mit winit und pixels.</span></li>
+<li><b>Quizsef</b><span class="en">Quiz and exam platform in Flask and SQLite (CS50x final project).</span><span class="de">Quiz- und Prüfungsplattform mit Flask und SQLite (CS50x-Abschlussprojekt).</span></li>
+</ul>
+
+<h2><span class="en">Skills</span><span class="de">Kenntnisse</span></h2>
+<div class="skills">
+<div><h3><span class="en">Languages, strongest first</span><span class="de">Sprachen, stärkste zuerst</span></h3>C, C++98, Rust, Python, JavaScript/TypeScript, SQL</div>
+<div><h3><span class="en">Tools</span><span class="de">Werkzeuge</span></h3>Git, GitHub Actions, Docker, Linux, Bash, NGINX, React, Flask, Django, Valgrind, GDB, Make</div>
+<div><h3><span class="en">Spoken</span><span class="de">Gesprochen</span></h3><span class="en">Arabic (native), English (fluent), German (B1 certificate, courses up to B2)</span><span class="de">Arabisch (Muttersprache), Englisch (fließend), Deutsch (B1-Zertifikat, Kurse bis B2)</span></div>
+</div>
+
+<h2><span class="en">Background</span><span class="de">Werdegang</span></h2>
+<div class="tl">
+<div><b>42 Vienna · 2025 –</b><span class="en">Computer Programming, peer-to-peer learning. Core curriculum due March 2027.</span><span class="de">Computer Programming, Peer-to-Peer-Lernen. Core Curriculum voraussichtlich März 2027.</span></div>
+<div><b>Vienna Event Crew · 2026 –</b><span class="en">Part-time stage build and container handling for events.</span><span class="de">Teilzeit: Bühnenaufbau und Containerhandling bei Veranstaltungen.</span></div>
+<div><b>CS50x · CS50w · 2023</b><span class="en">Harvard Online. CS50x certificate.</span><span class="de">Harvard Online. CS50x-Zertifikat.</span></div>
+<div><b>THIET, Tanta · 2017 – 2022</b><span class="en">Bachelor of Engineering, Computer Science, Communications and Electrical Engineering.</span><span class="de">Bachelor of Engineering, Computer Science, Kommunikations- und Elektrotechnik.</span></div>
+</div>
+</main>
+
+<footer>
+<span><span class="en">Looking for an IT role that uses systems, web and Linux skills.</span><span class="de">Auf der Suche nach einer IT-Position mit Systemen, Web und Linux.</span></span>
+<a href="mailto:yousef.elghanam@gmail.com">yousef.elghanam@gmail.com</a>
+</footer>
+</div>
+<script>
+(function(){
+var h=document.documentElement,en=document.getElementById('b-en'),de=document.getElementById('b-de');
+function set(l){h.lang=l;en.setAttribute('aria-pressed',l==='en');de.setAttribute('aria-pressed',l==='de');document.title=l==='de'?'Josef Elghnam – Softwareentwickler':'Josef Elghnam – Software Engineer'}
+en.onclick=function(){set('en')};de.onclick=function(){set('de')};
+})();
+</script>
+</body>
+</html>

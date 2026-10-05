@@ -1,2 +1,0 @@
-# YousefElghanam.github.io
-portfolio
